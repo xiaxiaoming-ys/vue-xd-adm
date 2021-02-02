@@ -11,7 +11,7 @@
 
       <el-main>
         <commonTab />
-        <!-- <router-view /> -->
+        <router-view />
       </el-main>
     </el-container>
 

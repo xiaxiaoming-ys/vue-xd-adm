@@ -30,11 +30,13 @@ export default {
       this.$router.push({name: tag.name})
     }
   },
+  mounted() {}
 }
 </script>
 
 <style lang="scss" scoped>
   .tabs{
+    margin-bottom: 10px;
     .el-tag{
       margin-right: 15px;
       cursor: pointer;
