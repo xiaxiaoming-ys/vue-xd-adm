@@ -14,6 +14,8 @@ import './mock'
 
 const app = createApp(App);
 
+
+
 // vue3全局挂在方法 this.$http 使用即可
 app.config.globalProperties.$http = http;
 

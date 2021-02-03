@@ -94,14 +94,18 @@ export default {
   methods: {
     initChart() {
       this.initChartData()
-
+      // 退出页面不能注销事件
       let echart = echarts.init(this.$refs.echart)
       echart.setOption(this.options);
-
       window.addEventListener('resize', echart.resize)
 
+      // this.echart = echarts.init(this.$refs.echart)
+
+      
+      // 下面方法遇到浮层框 trigger:'axis' 不起作用bug
       // if (this.echart) {
       //   this.echart.setOption(this.options)
+      //   console.log(this.echart)
       // } else {
       //   this.echart = echarts.init(this.$refs.echart)
       //   this.echart.setOption(this.options)
@@ -114,9 +118,6 @@ export default {
       } else {
         this.normalOption.series = this.echartData.series;
       }
-    },
-    resizeChart() {
-      this.echart ? this.echart.resize() : '';
     }
   }
 }

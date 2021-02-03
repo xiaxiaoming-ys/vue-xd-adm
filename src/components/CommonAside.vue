@@ -78,6 +78,10 @@ export default {
     },
     isCollapse() {
       return this.$store.state.tab.isCollapse
+    },
+    // 动态生成导航
+    menu() {
+      return this.$store.state.tab.menu
     }
   },
   methods: {
